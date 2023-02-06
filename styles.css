@@ -64,7 +64,9 @@ body{
   border-radius: 6px;
   border: none;
   padding: 9px 16px;
-
+}
+.btn:hover{
+  border: 2px solid var(--primary-text)
 }
 
 #main-rule{
@@ -73,8 +75,8 @@ body{
 }
 
 input[type="text"]{
-  background-color: var(--field-bg);
   border: none;
+  background-color: var(--field-bg);
   color: var(--field-fg);
   font-family: "Inter", sans-serif;
   font-size: 16px;
@@ -83,6 +85,15 @@ input[type="text"]{
   border-radius: 6px;
   text-align: center;
   padding: 8px 15px;
+}
+
+.click-border:focus{
+  outline: none;
+}
+
+.click-border:active {
+  border: 2px solid #00acff !important;
+  transition: .05s, -webkit-mask-size .05s .05s;
 }
 
 .header h1{
@@ -201,4 +212,7 @@ input[type="number"]{
   border-radius: 6px;
   border: none;
   padding: 9px 16px;
+}
+input[type="number"]:hover{
+  border: 2px solid var(--primary-text)
 }
