@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Karla:ital,wght@0,400;0,700;0,800;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1 class="primary-color">Generate a<br/><span class="secondary-color">random password</span></h1>
+      <p class="disabled-color">Never use an insecure password again.</p>
+    </div>
+    <div class="btns">
+      <button id="generate-btn" class="btn" onclick="btnGenerateClick()">Generate Passwords</button>
+      <label for="pwd-length" id="pwd-length-label" class="primary-color">Length:
+        <input
+            onkeyup="updateLength()"
+            onchange="updateLength()"
+            type="number"
+            min="8"
+            max="20"
+            value="15"
+            id="pwd-length">
+      </label>
+    </div>
+    <hr id="main-rule"/>
+    <div class="fields">
+      <input type="text" readonly class="pwd-field" id="pwd-field-1" onclick="copyToClipboard('pwd-field-1')"
+                                                 value=""/>
+      <input type="text" readonly class="pwd-field" id="pwd-field-2" onclick="copyToClipboard('pwd-field-2')"
+                                              value=""/>
+    </div>
+    <div class="theme-switch-wrapper">
+      <div class="slider-section"><label class="theme-switch" for="symbols-checkbox">
+        <input type="checkbox" id="symbols-checkbox"/>
+        <div class="slider round"></div>
+      </label>
+        <p id="symbols-label" class="slider-label">Symbols</p></div>
+
+      <div class="slider-section"><label class="theme-switch" for="numbers-checkbox">
+        <input type="checkbox" id="numbers-checkbox"/>
+        <div class="slider round"></div>
+      </label>
+        <p id="numbers-label" class="slider-label">Numbers</p></div>
+
+      <div class="slider-section"><label class="theme-switch" for="mode-checkbox">
+        <input type="checkbox" id="mode-checkbox"/>
+        <div class="slider round"></div>
+      </label>
+        <p id="dark-mode-label" class="slider-label">Dark Mode!</p></div>
+
+    </div>
+
+  </div>
+  <script src="scripts.js"></script>
+</body>
+</html>
